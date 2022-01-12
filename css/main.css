@@ -13,6 +13,7 @@
 }
 
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -21,10 +22,11 @@ body {
   line-height: 1.5;
   color: whitesmoke;
   text-align: left;
-  background: #242424;
+  background: #5283ee;
 }
 
 html {
+  width: 100%;
   height: 100%;
   font-family: sans-serif;
   line-height: 1.15;
@@ -110,16 +112,37 @@ header nav .navbar-nav a:hover {
 
 .container {
   min-height: 80vh;
+  width: 100%;
+  position: relative;
 }
 
 .container .col {
   border-radius: 20px;
   margin: 30px;
-  min-height: 300px;
 }
 
-.container .left {
-  background-color: #1f1f1f;
+.container .left .top table {
+  margin: 0 auto;
+}
+
+.container .left .top .crypto {
+  margin: 10px;
+}
+
+.container .left .top .current {
+  font-weight: bold;
+}
+
+.container .left .top .current .coin {
+  margin: 10px;
+}
+
+.container .left .top .current .currency {
+  margin: 10px;
+}
+
+.container .left .boto label {
+  font-weight: bold;
 }
 
 .container .right {
@@ -153,6 +176,63 @@ header nav .navbar-nav a:hover {
   font-size: large;
   margin: 5px;
   padding-left: 10px;
+}
+
+.container .row {
+  margin: 0 auto;
+}
+
+.container .talks {
+  background-color: #383737c5;
+}
+
+.container .talks .art {
+  background-color: #5283ee15;
+  padding: 3px;
+  border-radius: 20px;
+}
+
+.container .talks .head {
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.container .talks .col {
+  margin: 0 auto;
+}
+
+.container .talks .img {
+  max-width: 270px;
+  margin: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container .talks .img img {
+  max-width: 260px;
+  background-size: cover;
+}
+
+.container .talks .cont {
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 410px;
+}
+
+.container .talks .cont .info {
+  font-style: italic;
+  color: #9c9a92;
+}
+
+.container .talks .cont .title {
+  font-weight: 900;
+  color: #3d8bc7;
+}
+
+.container .talks .cont .sum {
+  font-weight: 300;
+  color: #fff;
 }
 
 footer {

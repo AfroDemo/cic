@@ -11,6 +11,7 @@
   scroll-behavior: smooth;
 }
 body {
+  width: 100%;
     margin: 0;
     padding: 0;
     font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -21,9 +22,10 @@ body {
     line-height: 1.5;
     color: whitesmoke;
     text-align: left;
-    background: #242424;
+    background: #5283ee;
   }
   html {
+    width: 100%;
     height: 100%;
     font-family: sans-serif;
     line-height: 1.15;
@@ -107,14 +109,38 @@ header{
 
 .container{
   min-height: 80vh;
+  width: 100%;
+  position: relative;
   
   .col{
     border-radius: 20px;
     margin: 30px;
-    min-height: 300px;
   }
   .left{
-    background-color: #1f1f1f;
+    //background-color: #1f1f1f;
+    .top{
+      table{
+        margin: 0 auto;
+      }
+      .crypto{
+        margin: 10px;
+      }
+      .current{
+        font-weight: bold;
+        .coin{
+          margin: 10px;
+        }
+        .currency{
+          margin: 10px;
+        }
+      }
+
+    }
+    .boto{
+      label{
+        font-weight: bold;
+      }
+    }
   }
   .right{
     *{
@@ -141,6 +167,52 @@ header{
       font-size: large;
       margin: 5px;
       padding-left: 10px;
+    }
+  }
+.row{
+  margin: 0 auto;
+}
+  .talks{
+    background-color: #383737c5;
+    .art{
+      background-color: #5283ee15;
+      padding: 3px;
+      border-radius: 20px;
+    }
+    .head{
+      font-weight: bolder;
+      font-size: xx-large;
+    }
+    .col{
+      margin: 0 auto;
+    }
+    .img{
+      max-width: 270px;
+      margin: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      img{
+        max-width: 260px;
+        background-size: cover;
+      }
+    }
+    .cont{
+      margin: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      min-width: 410px;
+      .info{
+        font-style: italic;
+        color: #9c9a92;
+      }
+      .title{
+        font-weight: 900;
+        color: #3d8bc7;
+      }
+      .sum{
+        font-weight: 300;
+        color: #fff;
+      }
     }
   }
 }
