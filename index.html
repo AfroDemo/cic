@@ -81,7 +81,7 @@
                                         <div class="equal" id="equal"> = </div>
                                     </td>
                                     <td>
-                                        <div id="currency" class="currency">1000000</div>
+                                        <div id="currency" class="currency">1,000,000</div>
                                     </td>
                                 </tr>
 
@@ -91,33 +91,30 @@
                 </div>
                 <div class="boto">
                     <div class="max-w-full mx-auto pt-4">
-                        <form action="" method="POST">
-
-
+                        
                             <div class="mb-3 text-center">
                                 <label for="input" class="form-label text-white">Investment Amount</label>
                                 <input type="number" class="form-control" name="input" id="input" required>
                             </div>
                             <div class="mb-3 text-center">
                                 <label for="prediction" class="form-label text-white">Price Predictions</label>
-                                <select class="form-select form-select-lg mb-3" name="prediction" required>
-                                    <option value="10000000">Mon $10,000,000</option>
-                                    <option value="15000000">Tue $9,000,000</option>
-                                    <option value="500">Wed $500</option>
+                                <select class="form-select form-select-lg mb-3" name="prediction" id="prediction" required>
+                                    <option value="10000000">Mon <span>10,000,000</span></option>
+                                    <option value="15000000">Tue <span>15,000,000</span></option>
+                                    <option value="1090500">Wed <span>1,090,500</span></option>
                                 </select>
                             </div>
                             <div class="mb-3 mt-3 text-center">
-                                <button type="submit" name="submit" class="btn btn-success btn-sm px-6 py-2">Check
+                                <button onclick="getOutPut()" name="submit" class="btn btn-success btn-sm px-6 py-2">Check
                                     Output</button>
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
             <div class="col right">
                 <div class="head text-center">Investment OutCome</div>
                 <div class="body">
-                    <table>
+                    <table id="out">
                         <tbody>
 
                             <tr>
@@ -125,7 +122,7 @@
                                     <div class="title">Invested at:</div>
                                 </td>
                                 <td>
-                                    <div class="cont">$ 1,000,000</div>
+                                    <div class="cont" id="curren">$ 0,000,000</div>
                                 </td>
                             </tr>
 
@@ -134,7 +131,7 @@
                                     <div class="title">Harvest at:</div>
                                 </td>
                                 <td>
-                                    <div class="cont">$ 10,000,000</div>
+                                    <div class="cont" id="harvest">$ 0,000,000</div>
                                 </td>
                             </tr>
 
@@ -143,7 +140,7 @@
                                     <div class="title">Invested:</div>
                                 </td>
                                 <td>
-                                    <div class="cont">$ 1,000</div>
+                                    <div class="cont" id="invested">$ 0,000,000</div>
                                 </td>
                             </tr>
 
@@ -152,7 +149,7 @@
                                     <div class="title">Profit:</div>
                                 </td>
                                 <td>
-                                    <div class="cont">$ 1,000,000</div>
+                                    <div class="cont" id="profit">$ 0,000,000</div>
                                 </td>
                             </tr>
 
