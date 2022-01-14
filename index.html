@@ -51,16 +51,17 @@
                                 <td>
                                     <div class="crypto">
                                         <select name="crypto" id="crypto">
-                                            <option value="btc">BTC</option>
-                                            <option value="eth">ETH</option>
+                                            <option id="btc" value="btc">BTC</option>
+                                            <option id="eth" value="eth">ETH</option>
                                         </select>
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="crypto">
-                                        <select name="crypto" id="crypto">
-                                            <option value="usd">USD</option>
-                                            <option value="tz">TshS</option>
+                                    <div class="money">
+                                        <select name="money" class="money" id="money" onchange="opt()">
+                                            <option id="usd" value="usd">USD</option>
+                                            <option id="tshs" value="tshs">TshS</option>
+                                            <option id="kshs" value="kshs">KshS</option>
                                         </select>
                                     </div>
                                 </td>
@@ -69,15 +70,18 @@
                         </tbody>
                     </table>
                     <div class="current">
-                        <table>
+                        <table id="current">
                             <tbody>
 
                                 <tr>
                                     <td>
-                                        <div class="coin">1 BTC</div>
+                                        <div id="coin" class="coin">1 BTC</div>
                                     </td>
                                     <td>
-                                        <div class="currency">$ 1,000,000</div>
+                                        <div class="equal" id="equal"> = </div>
+                                    </td>
+                                    <td>
+                                        <div id="currency" class="currency">1000000</div>
                                     </td>
                                 </tr>
 

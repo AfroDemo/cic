@@ -1,29 +1,32 @@
-$(".owl-carousel").owlCarousel({
-        autoplay: true,
-        autoplayhoverpause: true,
-        autoplaytimeout: 100,
-        items: 3,
-        nav: true,
-        loop: true
-    });
+function opt(){
+    var e = document.getElementById("money");
+    var hand = e.value;
+    if(hand == 'tshs'){
+        alert('Changing currency to Tanzania Shillings: ' + hand);
+        var curr = document.getElementById("current").rows[0].cells[2].querySelector('.currency');
+        
+        for(var i = 0; i < curr.length; i++){
+            if(curr[i].innerHTML.indexOf('KshS') > -1){
+                
+                var current = document.getElementById("current").rows[0].cells[2].querySelector('.currency').innerHTML;
+                var result = current * 20.35;
+            
+                document.getElementById("current").rows[0].cells[2].querySelector(".currency").innerHTML = result + ' TshS';
 
+            }
+        }
 
-//add hovered class in selected list item
-let list = document.querySelectorAll('.navigation li');
-function activeLink() {
-    list.forEach((item) =>
-        ltem.classList.remove('hovered'));
-        this.classList.add('hovered');
-}
-list.forEach((item) =>
-item.addEventListener('mouseover', activeLink));
-
-//menu toggle
-let toggle = document.querySelector('.toggle');
-let navigation = document.querySelector('.navigation');
-let main = document.querySelector('.main');
-
-toggle.onclick = function(){
-    navigation.classList.toggle('active')
-    main.classList.toggle('active')
+    }else if(hand == "usd"){
+        alert('Changing currency to United States Dollar: ' + hand);
+        var current = document.getElementById("current").rows[0].cells[2].querySelector('.currency').innerHTML;
+        var result = current / 2300;
+    
+        document.getElementById("current").rows[0].cells[2].querySelector(".currency").innerHTML = result + ' USD';
+    }else if(hand == "kshs"){
+        alert('Changing currency to Kenyan Shillings: ' + hand);
+        var current = document.getElementById("current").rows[0].cells[2].querySelector('.currency').innerHTML;
+        var result = current * 113.3;
+    
+        document.getElementById("current").rows[0].cells[2].querySelector(".currency").innerHTML = result + ' KshS';
+    }
 }
